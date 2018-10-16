@@ -56,11 +56,9 @@ export default class Product extends React.Component {
 Product.propTypes = {};
 
 Product.propTypes = {
-  cone: PropTypes.bool
-  size: PropTypes.string
-  scoops: PropTypes.arrayOf(PropTypes.string).isRequired
-  orderInfo: PropTypes.shape({
-   customerName: PropTypes.string.isRequired,
-   orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
- }).isRequired
+  name: PropTypes.string.isRequired
+  producer: PropTypes.string
+  hasWatermark: PropTypes.bool
+  color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']),
+  weight: PropTypes.number.isRequired 
 };
